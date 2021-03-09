@@ -1,0 +1,98 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<br>
+<br>
+<br>
+
+<div class="form-v10" >
+    <br>
+	<div class="row justify-content-center">
+		<div class="col-lg-6">
+			<div class="section_title text-center mb-55">
+				<h3><span>My Profile</span></h3>
+			</div>
+		</div>
+	</div>
+    
+        <div class="page-content" id="back" style= "background-image: url({% static 'images/bg8.jpg'%});">
+            <div class="form-v10-content">
+                <form class="form-detail" action="#" method="post" id="myform">
+                    <div class="form-left" > 
+                        <h2 style="color:#1c8aaf;">Your Personal Details</h2>
+                        <div style="padding-top:10px;font-size:18px">
+                            <div class="form-row">
+                                First Name : {{request.user.firstname}}
+                            </div>
+        
+                            <div class="form-row">
+                                Last Name : {{request.user.lastname}}
+                            </div>
+        
+                            <div class="form-row">
+                                User name : {{request.user.username}}
+                            </div>
+    
+                            <div class="form-row">
+                                Contact no. : {{request.user.phone_no}}
+                            </div>
+    
+                            <div class="form-row">
+                                Email id : {{request.user.email}}
+                            </div>
+    
+                           
+    
+                            
+                        </div>
+                        
+                        
+                    </div>
+                        
+                    <div class="form-right" style="background: #1c8aaf;">
+                        
+                        <div style="padding-top:70px;color:white;font-size:18px">
+                            
+    
+                            <div class="form-row">
+                                Address : {{request.user.address}}
+                            </div>
+    
+                            <div class="form-row">
+                                City : {{request.user.city}}
+                            </div>
+    
+                            <div class="form-row">
+                                State :{{request.user.state}}
+                            </div>
+    
+                            <div class="form-row">
+                                Pincode : {{request.user.pin}}
+                            </div>
+    
+                            
+    
+                            <div class="form-row-last">
+                                <a href="{% url 'update' %}">
+                                <input type="button" class="register" value="Edit" >
+                            </a>
+                            </div>
+    
+                            
+                            </div>
+                        
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+    
+    
+</div>
+
+
+{% endblock %}

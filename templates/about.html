@@ -1,0 +1,315 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <style>
+        #border
+        {
+        font-family: sans-serif;
+        background-color: #e1f7ed;
+        width: 1000px;
+        border: 8px  #3CC78F;
+        padding:30px;
+        margin: 20px;
+        margin-left: 50px;
+        margin-top: 0px;
+        }
+    </style>
+
+    <!--bradcam area start-->
+    <div class="bradcam_area breadcam_bg_3 overlay d-flex align-items-center justify-content-center" >
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>About Us</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bradcam_area_end  -->
+
+    
+
+    <!-- latest_activites_area_start  -->
+    <section class="contact-section">
+        <div class="container">
+
+            <div class="row">
+                
+                <div class="col-lg-8" >
+                    <form class="form-contact contact_form" action="#" method="post" id="contactForm" novalidate="novalidate">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                  <p style="text-align: center;"> <div id= border><p class="para_1">
+                                    &ensp; &ensp; Just over a year ago, we witnessed a sorrowful calamity of losing people at a momentous event
+                                    The Kumbh Mela at Prayagraj, Uttar Pradesh which is billed as largest gathering of humanity on earth, with 110 million
+                                     people expected to attend over 49 days. But for the thousands who gets lost among the crowds, 
+                                     help is at hand.
+                                     </p class="para_1">
+                                     <p class="para_1">Most people know the heart-sinking feeling of losing someone in a crowded place. 
+                                        Imagine the feeling of being lost at a large gathering. 
+                                        It’s a scene so dramatic, and so common, that it’s a 
+                                        theme in many Bollywood movies- families who attend the Kumbh are separated
+                                         and then reunited decades later.This scenario is not only can be seen at this gigantic
+                                        event but can also be seen at any place which encompasses huge gathering.</p class="para_1">
+                                    <p class="para_2">Similarly, just think about losing an essential commodity 
+                                    at such crowded gathering or infact at any place. We can’t afford to lose our 
+                                    important stuff in today’s running life and if we lose them, we want them back as soon as possible.</p class="para_2">
+                                    </div></p>  
+                                </div>
+                            </div>
+                              
+                        </div>
+                        
+                    </form>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+<!-- vision_area_start  -->
+<div class="latest_activites_area">
+    <div class=" video_bg_2 video_activite  d-flex align-items-center justify-content-center" >
+        
+    </div>   
+    
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-lg-7">
+                <div class="activites_info">
+                    <div class="section_title">
+                        <h3><span>Our Vision!!</span>  
+                            </h3>
+                    </div>
+                    <p class="sample-text" >
+                        <p class="para_1">We will aim to help maximum number of people,
+                                so that we can create a community of people who would want to help others in finding
+                                their lost belongings or their family members
+                        </p class="para_1">
+        
+                        <p class="para_1">Our main aim is to make this website global so that it can be
+                         used all around the world and
+                            it can be done only when people will feel honest and be kind toward other people.
+                        </p class="para_1">
+        
+                        <p class="para_1">As we have seen many people don’t bother much when they find some items which are
+                            lost so they either keep it thinking who will find the real owner or leave it there. It has
+                            also been known that during any calamity or chaos if the younger ones or old aged
+                            people are lost who barely remember their address, it takes a month or more by the
+                            police to find them.
+                        </p class="para_1">
+        
+                        <p class="para_2">We want people to find their old aged family member or
+                                    younger children in less time. This will also help to generate the feeling of honesty in
+                                    every person that they might want to help other people in reaching to their belongings
+                                    because they don’t need to reach to police they just have to login to this website.
+                        </p class="para_2">
+        
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- vision_area_end  -->
+   
+    <!-- working_area_start  -->
+    <div class="latest_activites_area">
+        <div class=" video_bg_3 video_activite  d-flex align-items-center justify-content-center">
+            <a href= "https://www.youtube.com/watch?v=ICqc1ytPdQg"><img src="{% static 'images/play.png' %}"></a>
+        </div>   
+        
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-lg-7">
+                    <div class="activites_info">
+                        <div class="section_title">
+                            <h3> <span>HOW WILL WE WORK?</span>  
+                                </h3>
+                        </div>
+                        <p class="para_1">Lost and found does not involve any third party, whatever matching is done here is 
+                            taking place with the help of OpenCv.Users may sign in and feed the details of any lost person or entity that 
+                            they want to find and they can also feed the details of any found person or entity about which 
+                            they have no idea that to whom the found object belongs to or the found person is related to.
+                            To find the lost people, we would be performing image mapping between the images of found people and 
+                            images of lost people and vice-versa. Similarly to find the lost item we would be performing feature 
+                            mapping between the images of found entities and images of lost entities and vice-versa. 
+                            Later the image matching we would also do text matching between the descriptions of lost entity and found entity.
+                            If the final result of image and text matching is TRUE then final verification would be done by admin and then 
+                            users are notified with the result and other details, but if the result is not true, then input details get stored
+                             in our record for future process</p class="para_1">
+                      
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--working area ends here-->
+
+
+    <!-- counter_area_start  -->
+    <div class="counter_area pt-120">
+        <div class="container">
+            <div class="counter_bg overlay">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single_counter d-flex align-items-center justify-content-center">
+                            <div class="icon">
+                                <i class="flaticon-calendar"></i>
+                            </div>
+                            <div class="events">
+                                <h3 class="counter">120</h3>
+                                <p>Total Cases</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single_counter d-flex align-items-center justify-content-center">
+                            <div class="icon">
+                                <i class="flaticon-heart-beat"></i>
+                            </div>
+                            <div class="events">
+                                <h3 class="counter">60</h3>
+                                <p>Found Cases</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single_counter d-flex align-items-center justify-content-center">
+                            <div class="icon">
+                                <i class="flaticon-in-love"></i>
+                            </div>
+                            <div class="events">
+                                <h3 class="counter">60</h3>
+                                <p>Lost Cases</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single_counter d-flex align-items-center justify-content-center">
+                            <div class="icon">
+                                <i class="flaticon-hug"></i>
+                            </div>
+                            <div class="events">
+                                <h3 class="counter">100</h3>
+                                <p>Solved Cses</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- counter_area_end  -->
+
+     <!-- our_volunteer_area_start  -->
+     <div class="our_volunteer_area section_padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center mb-55">
+                        <h3><span>Our Developers</span></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_volenteer">
+                        <div class="volenteer_thumb">
+                            <img src="{% static 'images/volunteer/kavya.jpeg' %}" alt=""></div>
+                        <div class="voolenteer_info d-flex align-items-end">
+                            <div class="social_links">
+                                <ul>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-facebook"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-pinterest"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-linkedin"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-twitter"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="info_inner">
+                                <h4>Kavya Srivastava</h4>
+                                <p>Frontend Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_volenteer">
+                        <div class="volenteer_thumb">
+                            <img src="{% static 'images/volunteer/stuti.jpeg' %}" alt="">
+                        </div>
+                        <div class="voolenteer_info d-flex align-items-end">
+                            <div class="social_links">
+                                <ul>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-facebook"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-pinterest"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-linkedin"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-twitter"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="info_inner">
+                                <h4>Stuti Agrawal</h4>
+                                <p>Django Developer </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_volenteer">
+                        <div class="volenteer_thumb">
+                            <img src="{% static 'images/volunteer/yashi.jpg' %}" alt="">
+                        </div>
+                        <div class="voolenteer_info d-flex align-items-end">
+                            <div class="social_links">
+                                <ul>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-facebook"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-pinterest"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-linkedin"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-twitter"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="info_inner">
+                                <h4>Yashasvi Srivastava</h4>
+                                <p>Open CV Programmer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- our_volunteer_area_end  -->
+
+
+{% endblock %}

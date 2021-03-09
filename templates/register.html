@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<br>
+<br>
+<br>
+<div class="form-v10" >
+	<br>
+	<div class="row justify-content-center">
+		<div class="col-lg-6">
+			<div class="section_title text-center mb-55">
+				<h3><span>Register Yourself</span></h3>
+			</div>
+		</div>
+	</div>
+
+	<div class="page-content" id="back" style="background-image: url({% static 'images/bg8.jpg' %});">
+		
+		
+		<div class="form-v10-content">
+			<form class="form-detail" action="register" method="post" id="myform">
+				{% csrf_token %}
+				<div class="form-left">
+					<h2 style="color: #1c8aaf;">General Infomation</h2>
+					<br>
+					<br>
+
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="first_name" id="first_name" class="input-text" placeholder="First Name" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" name="last_name" id="last_name" class="input-text" placeholder="Last Name" required>
+						</div>
+					</div>
+					
+					<div class="form-row">
+						<input type="text" name="username" class="company" id="company" placeholder="Username" required>
+					</div>
+					<div class="form-row">
+						<input type="password" name="password1" class="company" id="company" placeholder="Enter your password" required>
+					</div>
+					<div class="form-row">
+						<input type="password" name="password2" class="company" id="company" placeholder="Confirm your password" required>
+					</div>
+					<div>
+						{% for message in messages %}
+					   <h5>{{message}}</h5> 
+					   {% endfor %}
+					</div>
+					
+				</div>
+				<div class="form-right" style="background: #1c8aaf;">
+					<h2>Contact Details</h2>
+					<div class="form-row">
+						<input type="text" name="address" class="street" id="street" placeholder="Street Name" required>
+					</div>
+					
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="pin" class="zip" id="zip" placeholder="Pin Code" required>
+						</div>
+						<div class="form-row form-row-1">
+							<input type="text" name="city" class="input-text" placeholder="City" required>
+						</div>
+						
+					</div>
+					<div class="form-row">
+						<input type="text" name="state" id="your_email" class="input-text" placeholder="State ">
+					</div>
+					<div class="form-row">
+						<input type="text" name="phone" class="phone" id="phone" placeholder="Phone Number" required>
+					</div>
+					
+					<div class="form-row">
+						<input type="text" name="email" id="your_email" class="input-text" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Your Email">
+					</div>
+					
+					<div class="form-row-last">
+						<input type="submit" name="register" class="register" value="Verify">
+					</div>
+				</div>
+			</form>
+			
+		</div>
+	</div>
+</div>
+
+{% endblock %}

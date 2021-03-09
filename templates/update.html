@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<br>
+<br>
+<br>
+<div class="form-v10">
+	<br>
+	<div class="row justify-content-center">
+		<div class="col-lg-6">
+			<div class="section_title text-center mb-55">
+				<h3><span>Edit Your Details</span></h3>
+			</div>
+		</div>
+	</div>
+	<div class="page-content" id="back" style="background-image: url({% static 'images/bg8.jpg' %});">
+		<div class="form-v10-content">
+			<form class="form-detail" action="update" method="post" id="myform">
+				{% csrf_token %}
+				<div class="form-left">
+					<h2 style="color: #1c8aaf;">Edit your Infomation</h2>
+					<br>
+					
+						<div class="form-group">
+							<div class="form-row form-row-1">
+								<input type="text" name="first_name" id="first_name" class="input-text" value="{{request.user.firstname}}" placeholder="First Name" required>
+							</div>
+						<div class="form-row form-row-2">
+							<input type="text" name="last_name" id="last_name" class="input-text" value="{{request.user.lastname}}" placeholder="Last Name" required>
+						</div>
+					</div>
+					<div class="form-row">
+						<input type="text" name="phone" class="phone" id="phone" value="{{request.user.phone_no}}" placeholder="Phone Number" required>
+					</div>
+					
+					
+					<div class="form-row">
+						<h4>Username : &ensp; {{request.user.username}}</h4>
+					</div>
+					
+					<div class="form-row">
+						<h4>Email id : &ensp; {{request.user.email}}</h4>
+					</div>
+					<div>
+						{% for message in messages %}
+					   <h3>{{message}}</h3> 
+					   {% endfor %}
+					</div>
+					
+				</div>
+				<div class="form-right" style="background: #1c8aaf;">
+					<h2>Contact Details</h2>
+					<div class="form-row">
+						<input type="text" name="address" class="street" id="street"  value="{{request.user.address}}" placeholder="Street Name" required>
+					</div>
+					
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="pin" class="zip" id="zip" value="{{request.user.pin}}" placeholder="Zip Code" required>
+						</div>
+						<div class="form-row form-row-1">
+							<input type="text" name="city" class="input-text" value="{{request.user.city}}" placeholder="City" required>
+						</div>
+						
+					</div>
+					<div class="form-row">
+						<input type="text" name="state" id="your_email" class="input-text" value="{{request.user.state}}" placeholder="State " required> 
+					</div>
+					
+					
+
+					
+					<div class="form-row-last">
+						<input type="submit" name="update" class="register" value="Update">
+					</div>
+					
+				</div>
+			</form>
+			
+		</div>
+	</div>
+</div>
+
+{% endblock %}

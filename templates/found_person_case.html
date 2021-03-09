@@ -1,0 +1,207 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <!--================Home Banner Area =================-->
+    <!-- breadcrumb start-->
+    <div class="bradcam_area breadcam_bg_2 overlay d-flex align-items-center justify-content-center"  style="background-image: url({% static 'images/banner/person.png' %});">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>Found Cases</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb start-->
+
+    <!--================Category Product Area =================-->
+    <section class="cat_product_area section_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="left_sidebar_area">
+                        <aside class="left_widgets p_filter_widgets">
+                            <div class="l_w_title">
+                                <h3>Browse Categories</h3>
+                            </div>
+                            <div class="widgets_inner">
+                                <ul class="list">
+                                    <li>
+                                        <a href="found_person_case/Person">Person</a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="found_person_case/Pet">Pet animals</a>
+                                        
+                                    </li>
+                                    <li>
+                                        
+                                        <a href="found_item_case/Personal">Personal accessories</a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="found_item_case/Bags">Bags/Luggages</a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="found_item_case/Medical">Medical Equipment</a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="found_item_case/Musical">Musical Instruments</a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="found_item_case/Toys">Toys</a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="found_item_case/Identity">Identity Proof</a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="found_item_case/Sporting">Sporting Goods</a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="found_item_case/Vehicles">Vehicles</a>
+                                        
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+
+                        <aside class="left_widgets p_filter_widgets">
+                            <div class="l_w_title">
+                                <h3>Filter By date</h3>
+                            </div>
+                            <div class="widgets_inner">
+                                <ul class="list">
+                                    <li>
+                                        <a href="#">Recently Reported</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">New first</a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="#">Old first</a>
+                                    </li>
+                                    
+                                </ul>
+                                
+                            </div>
+                        </aside>
+
+     <!---                 <aside class="left_widgets p_filter_widgets">
+                            <div class="l_w_title">
+                                <h3>Color Filter</h3>
+                            </div>
+                            <div class="widgets_inner">
+                                <ul class="list">
+                                    <li>
+                                        <a href="#">Black</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Black Leather</a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="#">Black with red</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Gold</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Spacegrey</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+                    -->
+
+                        
+                             
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="product_top_bar d-flex justify-content-between align-items-center">
+                                <div class="single_product_menu">
+                                    <p><span> </span> Cases Found</p>
+                                </div>
+                             <!---   <div class="single_product_menu d-flex">
+                                    <h5>short by : </h5>
+                                    <select>
+                                        <option data-display="Select">name</option>
+                                        <option value="1">price</option>
+                                        <option value="2">product</option>
+                                    </select>
+                                </div>-->
+                                <div class="single_product_menu d-flex">
+                                    <h5>show :</h5>
+                                    <div class="top_pageniation">
+                                        <ul>
+                                            <li>1</li>
+                                            <li>2</li>
+                                            <li>3</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center latest_product_inner">
+                        {% for reports in found_reports %}
+                        <div class="col-lg-4 col-sm-6">
+                            
+                            <div class="single_product_item">
+                                <img src="{{ reports.img.url }}" alt="">
+                                <div class="single_product_text">
+                                    {% if reports.category.name == "Person"%}
+                                    <h4>{{ reports.name }}</h4>
+                                    {% endif %}
+                                    <h3>{{reports.category.name}}</h3>
+                                    <a href="detail_found_person/{{reports.id}}" class="add_cart">View<i class="ti-eye"></i></a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        {% endfor %}
+                        <div class="col-lg-12">
+                            <div class="pageination">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <i class="ti-angle-double-left"></i>
+                                            </a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <i class="ti-angle-double-right"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Category Product Area =================-->
+{% endblock %}

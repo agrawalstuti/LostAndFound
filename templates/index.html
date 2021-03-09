@@ -1,0 +1,189 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <!-- slider_area_start -->
+    <div class="slider_area">
+        <div class="single_slider  d-flex align-items-center slider_bg_1 overlay2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="slider_text ">
+                            <span>Get Started Today.</span>
+                            <h3> What once was lost,
+                                now is found.
+                            </h3>
+                            <p>With the help of latest technologies, let us help you find your lost items or folks.</p>
+                            <a href="{% url 'about' %}" class="boxed-btn3">Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider_area_end -->
+    <!-- reson_area_start  -->
+    <div class="reson_area section_padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center mb-55">
+                        <h3><span>How we can help you </span></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_reson">
+                        <div class="thum">
+                            <div class="thum_1">
+                                <img src="{% static 'images/help/1.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="help_content">
+                            <h4>Lost person</h4>
+                            <p>We will try to help you to find your lost relatives and friends.</p>
+                            <a href="{% url 'about' %}" class="read_more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_reson">
+                        <div class="thum">
+                            <div class="thum_1">
+                                <img src="{% static 'images/help/2.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="help_content">
+                            <h4>Misplaced essentials</h4>
+                            <p>We will help you find your valuable items that had been lost somewhere.</p>
+                            <a href="{% url 'about' %}" class="read_more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_reson">
+                        <div class="thum">
+                            <div class="thum_1">
+                                <img src="{% static 'images/help/3.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="help_content">
+                            <h4>Lost pet</h4>
+                            <p>We will help you find your lost pets which are important to you like your family.</p>
+                            <a href="{% url 'about' %}" class="read_more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- reson_area_end  -->
+    <!-- latest_activites_area_start  -->
+    <div class="latest_activites_area">
+        <div class=" video_bg_1 video_activite  d-flex align-items-center justify-content-center">
+            <a href= "https://www.youtube.com/watch?v=v3eMG--koKA"><img src="{% static 'images/play.png' %}"></a>
+        </div>   
+        
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-lg-7">
+                    <div class="activites_info">
+                        <div class="section_title">
+                            <h3> <span>Why  you choose us?? </span>  
+                                </h3>
+                        </div>
+                        <p class="para_1">Normally, events, where a huge crowd is expected, have a 
+                            camp in which volunteers or security guards collect people or essentials that 
+                            are found or collects information of the ones who went missing. After that,
+                            they wait for their relatives or owners to come to the camp and collect their 
+                            lost entity. In between all they do is announces the name or description of the 
+                            person which is a helpful task but does take a lot of time. It sometimes takes 
+                            years to find the thing or the person that went missing. THIS IS A BIG ISSUE.</p class="para_1">
+                      <div class="section_title">
+                        <h3> <span>Lost & Found  </span><br>
+                            </h3>
+                    </div>
+                    <p class="para_1">Lost and found is a non-profitable website that allows you to feed the 
+                        details along with images of lost or found entity (person, item or animal). In no 
+                        time image and details are matched from the lost entity section with the found entity 
+                        section and can get notified. Even if you didn’t find your uploaded entity right away that 
+                        is because nobody hasn’t found it yet. But as soon as anyone found your entity, you will 
+                        get nofitied. This will speed up the process of reuniting.</p class="para_1">
+                        <h3> <span>WHAT ONCE WAS LOST, NOW IS FOUND </span>
+                        </h3>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- latest_activites_area_end  -->
+    <!-- popular_causes_area_start  -->
+    <div class="popular_causes_area section_padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center mb-55">
+                        <h3><span>Foremost Causes</span></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="causes_active owl-carousel">
+                        <div class="single_cause">
+                            <div class="thumb">
+                                <img src="{% static 'images/causes/ca1.png' %}" alt="">
+                            </div>
+                            <div class="causes_content">
+                        
+                                <h4>Distracted Mind</h4>
+                                <p>Usualy it happens that we tend to engage ourselves in multiple tasks that
+                                    may lead to forgetfulness of our commodities.
+                                    This gives rise to distracted mind, hence we forget our essentials here and there
+                                </p>
+                                
+                            </div>
+                        </div>
+                        <div class="single_cause">
+                            <div class="thumb">
+                                <img src="{% static 'images/causes/ca2.png' %}" alt="">
+                            </div>
+                            <div class="causes_content">
+                                
+                                <h4>Chaotic crowd</h4>
+                                <p>When people involved in large gathering, there may be chaotic situation 
+                                    which leads to scrimmage, due to this people especially children and old people 
+                                    get parted away from their folks.
+                                </p>
+                                
+                            </div>
+                        </div>
+                        <div class="single_cause">
+                            <div class="thumb">
+                                <img src="{% static 'images/causes/ca3.png' %}" alt="">
+                            </div>
+                            <div class="causes_content">
+                                
+                                <h4>Lack of self consciousness</h4>
+                                <p>People of old age generally have aging problem of weak memory, due to which they are not 
+                                    able to get back to their folks. Similary children and pets don't have knowledge about their family
+                                    and how to reach them.
+                                </p>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- popular_causes_area_end  -->
+
+    
+    {% endblock %}
